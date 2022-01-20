@@ -1,7 +1,8 @@
 import math
 
 mathInput = float(input("\nThis is a sin/cos/tan to deg/rad calculator\nEnter trig value\n"))
-typeInput = input("\nEnter trig function type\n")
+preTypeInput = input("\nEnter trig function type\n")
+typeInput = preTypeInput.lower()
 
 if typeInput == "sin":
     x = math.asin(mathInput)
@@ -15,4 +16,4 @@ def degree(x):
     degree = (x*180)/pi
     return degree
 
-print(f"\nDegree is {degree(x)}\nAmount of radians is {x}")
+print(f"\nPrinting degree and radians for {mathInput}, {preTypeInput.upper()}\nDegree is {degree(x)}\nAmount of radians is {x}")
